@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  background-color: #000;
+  font-family: 'Courier New', Courier, monospace;
+  color: #33ff33;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.terminal-section {
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.terminal-section .terminal-content {
+  padding: 10px;
+  max-width: 100%;
+}
+
+.terminal-section #rotating-word::after {
+  content: "_";
+  animation: blink 1s step-start infinite;
+}
+
+.terminal-section a {
+  color: #33ff33;
+  position: relative;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.terminal-section a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background-color: #33ff33;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.terminal-section a:hover::after {
+  transform: scaleX(1);
+}
+
+.terminal-section a:not(:hover)::after {
+  transform-origin: right;
+}
