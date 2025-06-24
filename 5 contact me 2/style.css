@@ -1,0 +1,60 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  user-select: none;
+}
+
+.window {
+  width: 100vw;
+  height: 100vh;
+  background: #111;
+  position: relative;
+  overflow: hidden;
+}
+
+.text-container {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  width: auto;
+  font-family: monospace;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 4rem;
+  text-align: justify;
+  border: solid red 1px;
+
+
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+p {
+  margin: 0;
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 2rem;
+  justify-content: space-between;
+
+  /* border: solid yellow 1px; */
+
+
+}
+
+span {
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.special {
+  cursor: pointer;
+}
+
+/* Main hover effect using :has() */
+.text-container:has(.special:hover) span:not(.special:hover) {
+  opacity: 0.2;
+}
+
