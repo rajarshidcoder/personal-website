@@ -1,0 +1,60 @@
+body {
+    color: white;
+    background-color: black;
+    font-family: monospace;
+}
+
+
+
+.main{
+    height: 300vh;
+}
+
+pre {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    white-space: pre-line;
+    
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    border: solid 2px white;
+    background-color: black;
+}
+
+.slider {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  /* background: #000; */
+}
+
+.slide-track {
+  display: flex;
+  width: calc(200px * 14); /* 6 slides * 2 */
+  animation: scroll 10s linear infinite;
+}
+
+.slide {
+  height: 200px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: #666; */
+  margin: 0 5px;
+}
+
+.slider.p{
+    text-align: justify;
+    font-size: 1rem;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
